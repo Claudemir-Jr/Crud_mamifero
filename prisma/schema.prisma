@@ -10,23 +10,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        String @id @default(cuid())
-  email     String
-  password  String
-  name      String?
-  createdAt DateTime @default(now())
-
-  posts Post[]
-}
-
-model Post {
-  id          String      @id @default(cuid())
-  title       String
-  content     String
-  Published   Boolean     @default(false)
-  PublishedAt DateTime?
-  authorId    String
-
-  author User @relation(fields: [authorId], references: [id])
+model Onca {
+  id        Int      @id @default(autoincrement())
+  habitat String
+  comidaFavorita String
+  descricao String @db.Text()
+  quantidadePatas Int @default(4)
+  sexo String
+  hibernacao Boolean @default(true)
 }
