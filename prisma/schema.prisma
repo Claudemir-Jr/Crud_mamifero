@@ -16,4 +16,17 @@ model User {
   password  String
   name      String?
   createdAt DateTime @default(now())
+
+  posts Post[]
+}
+
+model Post {
+  id          String      @id @default(cuid())
+  title       String
+  content     String
+  Published   Boolean     @default(false)
+  PublishedAt DateTime?
+  authorId    String
+
+  author User @relation(fields: [authorId], references: [id])
 }
