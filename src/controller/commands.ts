@@ -88,7 +88,7 @@ async function listarCaracteristicas() {
     } = req.body;
     const editarOnca = await prisma.onca.update({
       where: {
-        id: id,
+        id: Number(id),
       },
       data: {
         habitat: habitat,
