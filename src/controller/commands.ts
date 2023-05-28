@@ -46,6 +46,11 @@ async function listarCaracteristicas() {
       where: {
         OR: [
           {
+            id: {
+              equals: Number (q),
+            },
+          },
+          {
             habitat: {
               contains: q,
               mode: "insensitive",
