@@ -12,7 +12,7 @@ const AdicionarScreen = () => {
 
   const adicionarCaracteristicas = async () => {
     try {
-      const response = await axios.post('http://seu-backend-url/adicionar', {
+      const response = await axios.post('http://localhost:3000/adicionar', {
         habitat,
         comidaFavorita,
         descricao,

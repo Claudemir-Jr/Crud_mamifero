@@ -14,7 +14,7 @@ const EditarScreen = ({ route }) => {
 
   const editarCaracteristicas = async () => {
     try {
-      const response = await axios.put(`http://seu-backend-url/editar/${id}`, {
+      const response = await axios.put(`http://localhost:3000/editar/${id}`, {
         habitat,
         comidaFavorita,
         descricao,

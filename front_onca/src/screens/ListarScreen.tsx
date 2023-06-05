@@ -8,7 +8,7 @@ const ListarScreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://seu-backend-url/listar');
+        const response = await axios.get('http://localhost:3000/listar');
         setCaracteristicas(response.data);
       } catch (error) {
         console.log(error);
