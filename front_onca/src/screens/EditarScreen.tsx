@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, Alert } from 'react-native';
 import axios from 'axios';
+import { RouteProp, NavigationProp } from '@react-navigation/native';
 
 const EditarScreen = ({ route }) => {
   const { id } = route.params;
